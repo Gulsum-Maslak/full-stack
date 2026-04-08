@@ -1,33 +1,23 @@
 # ☕ CoffeeWorld - Full Stack E-Ticaret Projesi
 
-CoffeeWorld, modern web teknolojileri kullanılarak geliştirilmiş, hem kullanıcı arayüzü (Frontend) hem de yönetim paneli (Backend) bulunan kapsamlı bir e-ticaret platformudur.
+CoffeeWorld; PHP, SCSS ve JavaScript kullanarak geliştirdiğim, modern arayüzlü ve yönetim paneli bulunan tam kapsamlı bir e-ticaret platformudur.
 
-
-
-## 🚀 Özellikler
-* **Dinamik Ürün Listeleme:** Veritabanından çekilen ürünlerin kategorize edilmiş şekilde sunulması.
-* **Gelişmiş Admin Paneli:** Ürün ekleme, silme ve güncelleme işlemlerinin yapılabildiği yönetim merkezi.
-* **Responsive Tasarım:** Bootstrap ve SCSS kullanılarak tüm cihazlara (Mobil, Tablet, Masaüstü) uyumlu arayüz.
-* **Etkileşimli UI:** ScrollReveal ve JavaScript kütüphaneleri ile akıcı kullanıcı deneyimi.
-* **Asenkron İşlemler:** Sayfa yenilenmeden veri alışverişi sağlayan AJAX yapısı.
+## 🚀 Proje Özellikleri
+* **Dinamik Ürünler:** Veritabanından gelen güncel kahve çeşitleri ve fiyatlandırma.
+* **Gelişmiş Admin Paneli:** Ürün ekleme, silme ve güncelleme gibi yönetimsel işlemler.
+* **Tam Uyumlu (Responsive) Tasarım:** SCSS ile kodlanmış, mobil ve masaüstü cihazlara duyarlı arayüz.
+* **Etkileşimli Deneyim:** ScrollReveal ile akıcı animasyonlar ve JavaScript destekli dinamik yapılar.
 
 ## 🛠️ Kullanılan Teknolojiler
+* **Backend:** PHP & MySQL (Veritabanı yönetimi ve sunucu işlemleri).
+* **Frontend:** HTML5, SCSS (Gelişmiş stil yönetimi), JavaScript.
+* **Kütüphaneler:** Bootstrap (Grid sistemi) ve ScrollReveal.
 
-### Frontend
-* **HTML5 & SCSS:** Yapısal kurgu ve gelişmiş stil yönetimi.
-* **Bootstrap:** Hızlı ve esnek grid sistemi.
-* **JavaScript:** Dinamik içerik yönetimi ve etkileşimler.
-* **ScrollReveal:** Sayfa içi kaydırma animasyonları.
+## 📦 Kurulum ve Çalıştırma
+1. Bu projeyi bilgisayarınıza indirin (clone).
+2. `coffeeworld-4.sql` dosyasını veritabanınıza (phpMyAdmin) içe aktarın.
+3. `bağlantı.php` dosyasındaki veritabanı kullanıcı adı ve şifre bilgilerini kendi sunucunuza göre düzenleyin.
+4. Projeyi bir yerel sunucuda (WAMP, XAMPP vb.) çalıştırın.
 
-### Backend
-* **PHP:** Sunucu taraflı iş mantığı ve API süreçleri.
-* **MySQL:** İlişkisel veritabanı yönetimi (Ürünler, stoklar, kullanıcılar).
-* **AJAX:** Kesintisiz veri iletişimi.
-
-
-
-## 📦 Kurulum
-
-1. Bu depoyu klonlayın:
-   ```bash
-   git clone [https://github.com/Gulsum-Maslak/full-stack.git](https://github.com/Gulsum-Maslak/full-stack.git)
+---
+*Bu çalışma bir web geliştirme projesi olarak hazırlanmıştır.*
