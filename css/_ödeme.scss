@@ -1,0 +1,53 @@
+@use "variables" as *;
+.checkout-wrapper {
+  position: relative;
+}
+
+.order-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.checkout-section {
+  font-family: $metin;
+  background-color: $yulaf !important;
+}
+
+.checkout-section .kartTitle {
+  font-family: $baslık;
+  color: $füme;
+}
+
+
+.checkout-summary{
+  background-color:$white !important;
+  .color{color: $turuncu;}
+}
+
+.custom-input {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.checkout-btn {
+  border-radius: 30px;
+  border: 1px solid $füme;
+  background: transparent;
+  color: $füme;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $turuncu;
+    color: $yulaf;
+  }
+}
+
+.order-success {
+  background-color: $yulaf;
+}
+

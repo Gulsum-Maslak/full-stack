@@ -1,0 +1,444 @@
+@use "variables" as *;
+//Scrollbar Stilleri
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: $füme;
+}
+::-webkit-scrollbar-thumb {
+  background: $turuncu; 
+  border-radius: 10px; 
+  border: 3px solid $füme; 
+  &:hover {background: $yulaf;}
+}
+
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: $turuncu $füme;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $yulaf !important;
+  overflow-x: hidden; // Yatay kaymayı engeller
+  padding-top: 80px; // Navbar boyutu kadar boşluk bırakır
+  min-height: 100vh;
+  position: relative;
+  @media (max-width: 767.98px) {
+    // Mobilde banner çok aşağıda kaldıysa bu değeri 70px veya 75px yaparak yukarı çekebilirsin
+    padding-top: 130px; 
+  }
+  @media (min-width: 768px) {
+    // Mobilde banner çok aşağıda kaldıysa bu değeri 70px veya 75px yaparak yukarı çekebilirsin
+    padding-top: 96px; 
+  }
+}
+
+section {
+  width: 100%;
+  overflow: hidden; // Her bölümün kendi içinde taşmasını engeller
+}
+//menu start
+.menuscroll {
+  animation: brandIn 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes brandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80px;
+  background-color: $füme !important;
+  z-index: 9999 !important;
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    flex-wrap: nowrap;
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+
+      .navbar-toggler {
+        margin-right: 15px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .navbar-brand {
+      color: $yulaf !important;
+      font-family: $baslık;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin: 0;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .nav-elements-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      @media (max-width: 767.98px) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      @media (min-width: 768px) {
+        width: auto;
+        justify-content: flex-end;
+      }
+    }
+
+    form {
+      .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .form-control {
+        background-color: transparent !important;
+        border: 1px solid $yulaf !important;
+        border-radius: 30px;
+        color: $white !important;
+        height: 38px;
+        width: 150px;
+        padding-left: 15px;
+        padding-right: 35px;
+
+        @media (max-width: 767.98px) {
+          width: 100px;
+        }
+
+        &::placeholder {
+          color: rgba($white, 0.5);
+        }
+
+        &:focus {
+          border-color: $turuncu !important;
+          box-shadow: none;
+        }
+      }
+
+      .search-icon-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: $yulaf;
+      }
+    }
+
+    /* ---- PROFİL & SEPET İKON DÜZELTME ---- */
+    .btn-member,
+    .cart-icon,
+    .btn-member i,
+    .cart-icon i {
+      color: $yulaf !important;
+      transition: all .3s ease;
+    }
+
+    .btn-member:hover,
+    .btn-member:hover i,
+    .btn-member.active,
+    .btn-member.active i {
+      color: $turuncu !important;
+    }
+
+    .cart-wrapper:hover .cart-icon,
+    .cart-wrapper:hover .cart-icon i,
+    .cart-icon.active,
+    .cart-icon.active i {
+      color: $turuncu !important;
+    }
+
+    .cart-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .cart-icon {
+        font-size: 22px;
+      }
+
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -10px;
+        background-color: $kırmizi;
+        color: $yulaf;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 10px;
+      }
+    }
+
+    .navbar-toggler {
+      border: 1px solid $yulaf;
+      padding: 4px 8px;
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 245, 220, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+    }
+
+    .nav-link {
+      color: $yulaf;
+
+      &:hover,
+      &.active {
+        color: $turuncu !important;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991.98px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: $füme;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid rgba($yulaf, 0.1);
+
+      .navbar-nav {
+        align-items: center;
+
+        .nav-link {
+          color: $yulaf !important;
+          font-family: $metin !important;
+          padding: 10px 0;
+
+          &:hover,
+          &.active {
+            color: $turuncu !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+//öne çıkan kart start
+.container {
+    h2 { font-family: $baslık; color: $füme; }
+  .row {
+    .col {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .card {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+        &:hover { transform: translateY(-8px); }
+        .card-body {font-family: $metin;
+          .card-title { font-family: $baslık; color: $füme;
+          }
+         
+        }
+        .card-footer {
+          background-color: transparent !important;
+          border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+          padding: 1rem !important;
+          .price-wrapper {
+            align-items: center;
+            display: flex;
+            line-height: 1.2;
+            .old-price {
+              font-size: 0.85rem;
+              color: $grey; 
+              text-decoration: line-through; 
+              font-family: 'Montserrat', sans-serif;
+            }
+            .new-price {
+              font-size: 1.25rem;
+              font-weight: 700;
+              color: $kırmizi; 
+              font-family: 'Montserrat', sans-serif;
+              padding-left: 10px;
+            }
+          }
+          .btn-outline-dark {
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            &:hover {
+              background-color: $turuncu; 
+              border-color: $turuncu;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//sube start
+.section-dark {
+  background-color: $füme;
+  .container {
+    h2 { font-family: $baslık; color: $yulaf; }
+    .row {
+      .col {
+        .card {
+          border:none;
+          border-radius: 12px;
+          overflow: hidden;
+          transition: transform 0.3s ease;
+          &:hover { transform: translateY(-8px); }
+          .card-img-overlay {
+            background: rgba($white, 0.5);
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.3s ease;
+          }
+          .card-title { font-family: $baslık; color: $füme; }
+          .card-text { font-family: $metin; color: $füme; }    
+        }
+      }
+    }
+  }
+}
+
+//hakkımızda start
+.about-section {
+  .container {
+    .row {
+        .kartTitle{
+          font-family: $baslık;
+          color: $füme !important;
+        }
+        .display-5{
+          font-family: $metin;
+          color: $füme !important;
+        }
+    }
+  }
+}
+
+//iletisim start
+section{
+  .container{
+    .row{
+      .display-2 {
+        font-family: $baslık;
+        color: $yulaf !important;
+      }
+      .display-5{
+        font-family: $metin;
+        color: $yulaf !important;
+      }
+      .text-muted.text{
+        font-family: $metin;
+        color: $yulaf !important;
+      }
+      .text-muted {
+        font-family: $metin;
+        color: $füme !important;
+      }
+    }
+    form{
+      button{
+        border-radius: 30px;
+        border:1px solid $yulaf;
+        color: $yulaf !important;
+        font-family: $metin;
+        transition: all 0.5s ease;
+        &:hover{ background-color: $turuncu; color:$yulaf !important; }
+      }
+    }
+  }
+}
+
+//footer start
+footer {
+  background-color: $füme;
+  color: $yulaf;
+  font-family: $metin;
+  .container {
+    .social-icons {
+      a {
+        color: $yulaf;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        &:hover { color: $turuncu; }
+      }
+    }
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: $turuncu !important;
+  color: $füme !important;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  &:hover {
+    background-color: $yulaf !important;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+}
+

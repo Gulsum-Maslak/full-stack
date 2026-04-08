@@ -1,0 +1,136 @@
+@charset "UTF-8";
+.auth-section {
+  background-color: #F5F5F0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.auth-section .auth-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(26, 26, 26, 0.1);
+}
+.auth-section .auth-card .auth-title {
+  font-family: "Playfair Display", serif;
+  color: #1A1A1A;
+  font-weight: 700;
+}
+.auth-section .auth-card .form-label {
+  font-family: "Montserrat", sans-serif;
+  color: #1A1A1A;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.auth-section .auth-card .form-control {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+.auth-section .auth-card .form-control:focus {
+  border-color: #D4783E;
+  box-shadow: 0 0 0 0.25rem rgba(212, 120, 62, 0.1);
+}
+.auth-section .auth-card .btn-auth {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.auth-section .auth-card .btn-auth:hover {
+  background-color: #D4783E;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.auth-section .auth-card .auth-footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+.auth-section .auth-card .auth-footer a {
+  color: #D4783E;
+  text-decoration: none;
+  font-weight: bold;
+}
+.auth-section .auth-card .auth-footer a:hover {
+  text-decoration: underline;
+}
+.auth-section .auth-card .forgot-pass {
+  font-size: 0.85rem;
+  color: #888;
+  text-decoration: none;
+}
+.auth-section .auth-card .forgot-pass:hover {
+  color: #D4783E;
+}
+/*
+.hakkımızda-banner {
+  width: 100%;
+  height: 55vh;
+  background-image: url(../img/bannerSayfalar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+.hakkımızda-banner .container-fluid {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.hakkımızda-banner .container-fluid .row {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.hakkımızda-banner .container-fluid .row .hero-text {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  color: #F5F5F0;
+  font-family: "Montserrat", sans-serif;
+  z-index: 2;
+}
+.hakkımızda-banner .container-fluid .row .hero-text h1 {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+@media (max-width: 992px) {
+  .hakkımızda-banner .container-fluid .row .hero-text h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .hakkımızda-banner .container-fluid .row .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .hakkımızda-banner .container-fluid .row .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .hakkımızda-banner {
+    height: 40vh;
+  }
+}
+@media (max-width: 576px) {
+  .hakkımızda-banner {
+    height: 30vh;
+  }
+}*/
+
+/*# sourceMappingURL=uye_giri%C5%9F.css.map */

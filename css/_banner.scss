@@ -1,0 +1,101 @@
+@use "variables" as *;
+.main-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner-content {
+    text-align: center;
+    color: $yulaf;
+    font-family: $metin;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+     
+  }
+}
+
+.banner-home {
+  height: calc(100vh - 80px);
+  .overlay {
+    display: none;
+  }
+
+  .banner-content {
+    text-align: center;
+    max-width: 500px;
+  }
+}
+
+.banner-light {
+  .overlay {
+    background: rgba($yulaf, 0.6);
+  }
+  .banner-content {
+    text-align: center;
+    color: $füme;
+  }
+}
+
+.banner-dark {
+  .overlay {
+    background: rgba($füme, 0.6);
+  }
+  .banner-content {
+    text-align: center;
+    color: $yulaf;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main-banner {
+    height: 40vh; 
+    .container{
+      .banner-content{
+        h1{font-size: 2rem;}
+        p{font-size: 1rem;}
+      }
+    }
+  }
+   .banner-home .banner-content h1 {
+    text-shadow: 0 5px 5px rgba(0,0,0,0.6);
+  }
+
+  .banner-home .banner-content p {
+    text-shadow: 0 5px 5px rgba(0,0,0,0.6);
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-home .banner-content h1 {
+    text-shadow: 0 5px 5px rgba(0,0,0,0.6);
+  }
+
+  .banner-home .banner-content p {
+    text-shadow: 0 5px 5px rgba(0,0,0,0.6);
+  }
+}
+
+.btn-member.active, .cart-icon.active {
+    color: $turuncu !important; // Veya aktif olmasını istediğin renk
+}

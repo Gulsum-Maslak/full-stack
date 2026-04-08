@@ -1,0 +1,71 @@
+@use "variables" as *;
+.auth-section {
+    background-color: $yulaf; // Sayfa arka planı
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+
+    .auth-card {
+        background-color: $white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border: 1px solid rgba($füme, 0.1);
+
+        .auth-title {
+            font-family: $baslık;
+            color: $füme;
+            font-weight: 700;
+        }
+
+        .form-label {
+            font-family: $metin;
+            color: $füme;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            &:focus {
+                border-color: $turuncu;
+                box-shadow: 0 0 0 0.25rem rgba($turuncu, 0.1);
+            }
+        }
+
+        .btn-auth {
+            background-color: $füme;
+            color: $yulaf;
+            padding: 12px;
+            border-radius: 10px;
+            font-family: $baslık;
+            font-weight: bold;
+            transition: all 0.3s;
+            &:hover {
+                background-color: $turuncu;
+                color: $white;
+                transform: translateY(-2px);
+            }
+        }
+
+        .auth-footer {
+            font-family: $metin;
+            font-size: 0.9rem;
+            a {
+                color: $turuncu;
+                text-decoration: none;
+                font-weight: bold;
+                &:hover { text-decoration: underline; }
+            }
+        }
+        
+        .forgot-pass {
+            font-size: 0.85rem;
+            color: $grey;
+            text-decoration: none;
+            &:hover { color: $turuncu; }
+        }
+    }
+}

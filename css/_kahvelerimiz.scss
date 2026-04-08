@@ -1,0 +1,124 @@
+@use "variables" as *;
+//model start
+// 1. Modal Arka Plan Karartması (Backdrop)
+// Navbar 9999 olduğu için bunu tam üzerine veya hemen altına almalıyız
+.modal-backdrop {
+  z-index: 1040 !important; 
+  background-color: $füme !important;
+  &.show {
+    opacity: 0.85;
+  }
+}
+
+// 2. Modal Ana Kapsayıcı
+.modal {
+  z-index: 9999 !important; // Her şeyin (Navbar dahil) en üstünde olması için
+
+  .coffee-modal {
+    background-color: $füme !important;
+    border: 2px solid rgba($turuncu, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+    .modal-header {
+      border-bottom: 1px solid rgba($yulaf, 0.1);
+      padding: 1.5rem;
+      
+      .modal-title {
+        font-family: $baslık;
+        color: $yulaf;
+        font-size: 1.5rem;
+      }
+      
+      .btn-close-white {
+        filter: invert(1) grayscale(100%) brightness(200%); // Kapatma butonunu beyazlatır
+      }
+    }
+
+    .modal-body {
+      padding: 2rem;
+      color: $yulaf;
+
+      .modal-img-container {
+        margin-bottom: 1.5rem;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 2px solid $turuncu;
+        
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+
+      .product-title {
+        font-family: $baslık;
+        color: $yulaf;
+        margin-bottom: 1rem;
+      }
+
+      .product-description {
+        font-family: $metin;
+        color: rgba($yulaf, 0.8);
+        line-height: 1.6;
+      }
+
+      .price-tag {
+        background-color: rgba($turuncu, 0.1);
+        display: block;
+        margin-top: 1.5rem;
+        font-family: $baslık;
+        font-size: 2rem;
+        color: $yulaf;
+      }
+    }
+
+    .modal-footer {
+      border-top: 1px solid rgba($yulaf, 0.1);
+      padding: 1.5rem;
+      justify-content: center;
+      gap: 15px;
+
+      .btn-close-modal {
+        background-color: $turuncu;
+        border: 1px solid $turuncu;
+        color: $yulaf;
+        border-radius: 30px;
+        padding: 10px 30px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: darken($turuncu, 10%);
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba($turuncu, 0.3);
+        }
+      }
+
+      .btn-add-cart {
+        background-color: $turuncu;
+        border: 1px solid $turuncu;
+        color: $yulaf;
+        border-radius: 30px;
+        padding: 10px 30px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: darken($turuncu, 10%);
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba($turuncu, 0.3);
+        }
+      }
+    }
+  }
+}
+//model end
+
+.modal-img-container {
+    img {
+        max-height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
